@@ -4,8 +4,8 @@ BdsDxe: starting Boot0002 "UEFI QEMU HARDDISK QM00001 " from PciRoot(0x0)/Pci(0x
 Booting WasabiOS...
 image_handle: 0x00000000BEC4E498
 efi_system_table: 0x00000000bf9ee018
-image_base: 0x00000000BE304000
-image_size: 0x000000000007A000
+image_base: 0x00000000BE300000
+image_size: 0x000000000007C000
 [INFO] src/main.rs:43 : info
 [WARN] src/main.rs:44 : warn
 [ERROR] src/main.rs:45 : error
@@ -601,34 +601,35 @@ None
 [INFO] src/x86.rs:787: Loading GDT @ 0x000000013FF7FE20
 [INFO] src/x86.rs:794: Loading TSS ( selector = 0x18 )
 [INFO] src/x86.rs:671: Loading IDT: IdtrParameters { limit: 4096, base: 0x13ff7ee00 }
-[INFO] src/main.rs:79 : Exception initialized!
+[INFO] src/main.rs:80 : Exception initialized!
 [ERROR] src/x86.rs:500: Interrupt Info: 
  {
- rip: 0x00000000BE3174D5, CS: 0x0008,
- rsp: 0x00000000BFEB0450, SS: 0x0010,
- rbp: 0x00000000BFEB0450,
- rflags: 0x0000000000000006,
+ rip: 0x00000000BE313A15, CS: 0x0008,
+ rsp: 0x00000000BFEB01D0, SS: 0x0010,
+ rbp: 0x00000000BFEB01D0,
+ rflags: 0x0000000000000002,
 error_code: 0x0000000000000000,
- rax: 0x0000000000000000, rcx: 0x00000000BFEB0100,
- rdx: 0x00000000BE340550, rbx: 0x00000000BE4E72C8,
+ rax: 0x0000000000000000, rcx: 0x00000000BFEAFE00,
+ rdx: 0x00000000BE33D640, rbx: 0x00000000BE4E72C8,
  rsi: 0x00000000BE632018, rdi: 0x00000000BE632018,
  r8: 0x0000000000000001, r9: 0x0000000000000004,
- r10: 0x00000000BE350EF8, r11: 0x0000000000000001,
+ r10: 0x00000000BE34E348, r11: 0x0000000000000001,
  r12: 0x0000000000000000, r13: 0x0000000000000000,
  r14: 0x00000000BE4E7218, r15: 0x0000000000000005,
  }
 [ERROR] src/x86.rs:501: Exception 0x03: 
 [ERROR] src/x86.rs:504: Breakpoint
-[INFO] src/main.rs:81 : Execution continued.
-[INFO] src/main.rs:83 : Now we are using our own page tables!
+[INFO] src/main.rs:82 : Execution continued.
+[INFO] src/main.rs:84 : Now we are using our own page tables!
+[INFO] src/main.rs:99 : HPET is at 0x00000000FED00000
 [INFO] src/executor.rs:86 : Executor starts running...
-[INFO] src/main.rs:96 : 100
-[INFO] src/main.rs:103: 200
-[INFO] src/main.rs:96 : 101
-[INFO] src/main.rs:103: 201
-[INFO] src/main.rs:96 : 102
-[INFO] src/main.rs:103: 202
-[INFO] src/main.rs:96 : 103
-[INFO] src/main.rs:103: 203
-[INFO] src/executor.rs:94 : Task completed: Task(src/main.rs:94): Ok(())
-[INFO] src/executor.rs:94 : Task completed: Task(src/main.rs:101): Ok(())
+[INFO] src/main.rs:102: 100
+[INFO] src/main.rs:109: 200
+[INFO] src/main.rs:102: 101
+[INFO] src/main.rs:109: 201
+[INFO] src/main.rs:102: 102
+[INFO] src/main.rs:109: 202
+[INFO] src/main.rs:102: 103
+[INFO] src/main.rs:109: 203
+[INFO] src/executor.rs:94 : Task completed: Task(src/main.rs:100): Ok(())
+[INFO] src/executor.rs:94 : Task completed: Task(src/main.rs:107): Ok(())
